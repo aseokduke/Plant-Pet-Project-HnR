@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 788881234}
   - component: {fileID: 788881233}
   m_Layer: 5
-  m_Name: Moisture Bar
+  m_Name: LightBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.4
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.8
+  m_Value: 0.3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 915528963}
   - component: {fileID: 915528962}
   m_Layer: 5
-  m_Name: pHLabel
+  m_Name: HumidityLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,7 +975,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'pH
+  m_text: 'Humidity
+
 
 '
   m_isRightToLeft: 0
@@ -1200,7 +1201,7 @@ GameObject:
   - component: {fileID: 1016628450}
   - component: {fileID: 1016628449}
   m_Layer: 5
-  m_Name: Moisture
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,9 +1246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '40%
-
-'
+  m_text: 50%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1582,7 +1581,7 @@ GameObject:
   - component: {fileID: 1379397188}
   - component: {fileID: 1379397187}
   m_Layer: 5
-  m_Name: pH
+  m_Name: Humidity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1627,7 +1626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '7.0
+  m_text: '70%
 
 
 '
@@ -1764,7 +1763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "28\xB0C\n"
+  m_text: "26\xB0C\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1854,7 +1853,7 @@ GameObject:
   - component: {fileID: 1534126260}
   - component: {fileID: 1534126259}
   m_Layer: 5
-  m_Name: pHBar
+  m_Name: HumidityBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1966,7 +1965,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0.7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2289,7 +2288,7 @@ GameObject:
   - component: {fileID: 1839398109}
   - component: {fileID: 1839398108}
   m_Layer: 5
-  m_Name: MoistureLabel
+  m_Name: LightLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2334,7 +2333,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Moisture
+  m_text: 'Light
+
 
 '
   m_isRightToLeft: 0
@@ -2538,7 +2538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 1, b: 0.73333335, a: 1}
+  m_Color: {r: 0.9294265, g: 0.9433962, b: 0.5725643, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
