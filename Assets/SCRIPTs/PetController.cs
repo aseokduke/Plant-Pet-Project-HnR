@@ -11,7 +11,7 @@ public class PetController : MonoBehaviour
     private float doubleClickThreshold = 0.5f; // Adjust this threshold as needed
 
     // Healthbar Variables
-    [SerializeField] float health, maxHealth = 3f;
+    // [SerializeField] float health, maxHealth = 3f;
     [SerializeField] PetHealthbar healthBar;
 
     // Assigns the healthbar to the pet
@@ -23,8 +23,8 @@ public class PetController : MonoBehaviour
     private void Start()
     {
         Awake();
-        health = maxHealth;
-        healthBar.UpdateHealthBar(health, maxHealth);
+        // health = maxHealth;
+        // healthBar.UpdateHealthBar(health, maxHealth);
 
         originalPosition = transform.position;
         StartCoroutine(RandomMovement());
@@ -48,8 +48,8 @@ public class PetController : MonoBehaviour
                     transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
                     // Decreases the health as the pet moves (for now)
-                    health -= 0.1f;
-                    healthBar.UpdateHealthBar(health, maxHealth); 
+                    // health -= 0.1f;
+                    // healthBar.UpdateHealthBar(health, maxHealth); 
 
                     yield return null;
                 }
