@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,19 +13,34 @@ public class PetController : MonoBehaviour
 
     // Healthbar Variables
     // [SerializeField] float health, maxHealth = 3f;
-    [SerializeField] PetHealthbar healthBar;
+    [SerializeField] PetHealthbar tempBar;
+    [SerializeField] float temp, maxTemp;
+    [SerializeField] TextMeshProUGUI tempStr;
 
-    // Assigns the healthbar to the pet
-    private void Awake()
-    {
-        healthBar = GetComponentInChildren<PetHealthbar>();
-    }
+    [SerializeField] PetHealthbar moistureBar;
+    [SerializeField] float moisture, maxMoisture;
+    [SerializeField] TextMeshProUGUI moistureStr;
+
+    [SerializeField] PetHealthbar lightBar;
+    [SerializeField] float lightIntensity, maxLightIntensity;
+    [SerializeField] TextMeshProUGUI lightStr;
 
     private void Start()
     {
-        Awake();
-        // health = maxHealth;
-        // healthBar.UpdateHealthBar(health, maxHealth);
+        temp = 100;
+        maxTemp = 100;
+        tempStr.text = temp.ToString() + "°C";
+        tempBar.UpdateHealthBar(temp, maxTemp);
+
+        moisture = 90;
+        maxMoisture = 100;
+        moistureStr.text = moisture.ToString() + "%";
+        moistureBar.UpdateHealthBar(moisture, maxMoisture);
+
+        lightIntensity = 80;
+        maxLightIntensity = 100;
+        lightStr.text = lightIntensity.ToString() + "%";
+        lightBar.UpdateHealthBar(lightIntensity, maxLightIntensity);
 
         originalPosition = transform.position;
         StartCoroutine(RandomMovement());
@@ -46,11 +62,6 @@ public class PetController : MonoBehaviour
                 while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
-                    // Decreases the health as the pet moves (for now)
-                    // health -= 0.1f;
-                    // healthBar.UpdateHealthBar(health, maxHealth); 
-
                     yield return null;
                 }
             }
