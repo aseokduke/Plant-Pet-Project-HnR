@@ -1,6 +1,6 @@
 using System.Collections;
-using UnityEngine;
 using System.IO;
+using UnityEngine;
 
 public class ArduinoDataReceiver : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class ArduinoDataReceiver : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
-        filePath = Application.dataPath + "/ArduinoData.txt";
+        filePath = Path.Combine(Application.persistentDataPath, "ArduinoData.txt");
         StartCoroutine(ReadData());
     }
 
@@ -25,6 +25,12 @@ public class ArduinoDataReceiver : MonoBehaviour
         {
             try
             {
+                // Check if the file exists, and create it if not
+                if (!File.Exists(filePath))
+                {
+                    File.WriteAllText(filePath, "");
+                }
+
                 string data = File.ReadAllText(filePath);
                 ProcessData(data);
             }
@@ -49,4 +55,3 @@ public class ArduinoDataReceiver : MonoBehaviour
         }
     }
 }
-
