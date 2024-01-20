@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 915528963}
   - component: {fileID: 915528962}
   m_Layer: 5
-  m_Name: HumidityLabel
+  m_Name: MoistureLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Humidity
+  m_text: 'Moisture
 
 
 '
@@ -1440,7 +1440,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   menu: {fileID: 0}
-  healthBar: {fileID: 0}
+  tempBar: {fileID: 0}
+  temp: 0
+  maxTemp: 0
+  tempStr: {fileID: 0}
+  moistureBar: {fileID: 0}
+  moisture: 0
+  maxMoisture: 0
+  moistureStr: {fileID: 0}
+  lightBar: {fileID: 0}
+  lightIntensity: 0
+  maxLightIntensity: 0
+  lightStr: {fileID: 0}
 --- !u!1 &1302441017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1592,7 @@ GameObject:
   - component: {fileID: 1379397188}
   - component: {fileID: 1379397187}
   m_Layer: 5
-  m_Name: Humidity
+  m_Name: Moisture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1853,7 +1864,7 @@ GameObject:
   - component: {fileID: 1534126260}
   - component: {fileID: 1534126259}
   m_Layer: 5
-  m_Name: HumidityBar
+  m_Name: MoistureBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2275,7 +2286,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   menu: {fileID: 1832618150}
-  healthBar: {fileID: 0}
+  tempBar: {fileID: 813748428}
+  temp: 0
+  maxTemp: 0
+  tempStr: {fileID: 1533844143}
+  moistureBar: {fileID: 1534126260}
+  moisture: 0
+  maxMoisture: 0
+  moistureStr: {fileID: 1379397187}
+  lightBar: {fileID: 788881234}
+  lightIntensity: 0
+  maxLightIntensity: 0
+  lightStr: {fileID: 1016628449}
 --- !u!1 &1839398106
 GameObject:
   m_ObjectHideFlags: 0
