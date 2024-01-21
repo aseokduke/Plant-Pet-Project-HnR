@@ -17,7 +17,7 @@ public class ArduinoDataReceiver : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         // Adjust the port name and baud rate based on your Arduino setup
-        string portName = "COM3";
+        string portName = "COM8";
         int baudRate = 9600;
 
         serialPort = new SerialPort(portName, baudRate);
@@ -57,9 +57,9 @@ public class ArduinoDataReceiver : MonoBehaviour
 
         if (values.Length == 3)
         {
-            temperature = float.Parse(values[2].Substring("temperature:".Length).Trim());
-            humidity = float.Parse(values[1].Substring("humidity:".Length).Trim());
-            lightLevel = float.Parse(values[0].Substring("light:".Length).Trim());
+            temperature = float.Parse(values[0]);
+            humidity = float.Parse(values[1]);
+            lightLevel = float.Parse(values[2]);
 
             Debug.Log($"Parsed data - Temperature: {temperature}, Humidity: {humidity}, Light: {lightLevel}");
         }
