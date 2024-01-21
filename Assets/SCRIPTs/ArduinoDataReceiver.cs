@@ -1,6 +1,6 @@
 using System.Collections;
-using UnityEngine;
 using System.IO.Ports;
+using UnityEngine;
 
 public class ArduinoDataReceiver : MonoBehaviour
 {
@@ -48,18 +48,19 @@ public class ArduinoDataReceiver : MonoBehaviour
     {
         Debug.Log($"Received data: {data}");
 
-        // Convert the received data to lowercase to make it case-insensitive
-        data = data.ToLower();
-
         // Parse data received from Arduino
         string[] values = data.Split(',');
-        Debug.Log($"Number of values: {values.Length}");
-
         if (values.Length == 3)
         {
+<<<<<<< HEAD
             temperature = float.Parse(values[0]);
             humidity = float.Parse(values[1]);
             lightLevel = float.Parse(values[2]);
+=======
+            temperature = float.Parse(values[2].Substring("Temperature:".Length));
+            humidity = float.Parse(values[1].Substring("Humidity:".Length));
+            lightLevel = float.Parse(values[0].Substring("Light:".Length));
+>>>>>>> 09a01f21e5c3f88d5217d4dc3fcdc74682025d15
 
             Debug.Log($"Parsed data - Temperature: {temperature}, Humidity: {humidity}, Light: {lightLevel}");
         }
